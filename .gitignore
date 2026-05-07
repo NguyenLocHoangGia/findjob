@@ -1,0 +1,44 @@
+HELP.md
+target/
+.env
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+
+
+### Custom Security & History ###
+
+# Bỏ qua thư mục lịch sử cục bộ của VS Code (Thủ phạm gây rò rỉ secret trong các file cũ)
+.history/
+FindJob_AI/.history/
+
+# Bỏ qua file cấu hình chứa API Key thật
+src/main/resources/application.properties

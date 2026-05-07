@@ -1,0 +1,34 @@
+Run on Windows
+==============
+
+Requirements:
+- Java 17
+- MySQL running on localhost:3306
+- Database name: jobportal_intern
+- MySQL user/password must match src/main/resources/application.properties
+- The database should use utf8mb4. The provided database_seed_minimal.sql creates it with utf8mb4.
+
+Run:
+1. Extract this zip.
+2. Open Command Prompt in the findjob_tt folder.
+3. Run:
+
+   run-windows-jar.bat
+
+If you want Maven to rebuild from source, run:
+
+   run-windows.bat
+
+Or run directly:
+
+   mvnw.cmd spring-boot:run
+
+The app starts at:
+
+   http://localhost:8080
+
+Notes:
+- Uploaded files are read from the local uploads folder.
+- Hibernate uses spring.jpa.hibernate.ddl-auto=update, so new CV scoring tables are created/updated automatically.
+- If register/login role data is missing in a new database, import database_seed_minimal.sql once.
+- CV AI settings are in src/main/resources/application.properties and can be overridden with CV_AI_BASE_URL, CV_AI_API_KEY, CV_AI_MODEL, and CV_AI_TIMEOUT_SECONDS.
